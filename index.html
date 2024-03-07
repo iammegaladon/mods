@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LOGIN | TMC Mods</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+
+
+<div class="loginform">
+    <h2>TMc Mods Client Authentication</h2>
+    <form action="" autocomplete="off">
+        <p>Username</p>
+        <input type="text" name="username" placeholder="Username">
+        <p>Password</p>
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="login-btn" value="Login">
+        <a href="#">Forgot your password?</a>
+    </form>        
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('.loginform form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var username = form.elements['username'].value;
+            var password = form.elements['password'].value;
+            
+            if (username === 'mcocfiverr' && password === 'h8xi7') {
+                window.location.href = 'User.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
+</body>
+</html>
